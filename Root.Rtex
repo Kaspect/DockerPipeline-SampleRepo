@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{graphicx}
+%% for inline R code: if the inline code is not correctly parsed, you will see a message
+\newcommand{\rinline}[1]{SOMETHING WRONG WITH knitr}
+%% begin.rcode setup, include=FALSE
+% library(knitr)
+% opts_chunk$set(dev = 'pdf', fig.path='figure/latex-', cache.path='cache/latex-', fig.align='left')
+% my_pdf = function(file, width = 8, height = 8) { pdf(file, width = width, height = height, pointsize = 8)}
+%% end.rcode
+\begin{document}
+
+%% a chunk with default options
+%% begin.rcode echo=FALSE
+% x <- "Los Angeles"
+% options(scipen = 999)
+% if (!exists("LAControllerDatabase")) {
+%	 LAControllerDatabase <- read.csv("https://controllerdata.lacity.org/api/views/3ctd-sjrm/rows.csv?accessType=DOWNLOAD")
+% } 
+% source("SchwarzerRscript.r")
+%% end.rcode
+
+The \rinline{x} City Controller data under analysis includes \rinline{getNumPayments(LAControllerDatabase)} distinct payments, whose mean size is \$\rinline{getMeanPayment(LAControllerDatabase)},
+with a median size of \$\rinline{getMedianPayment(LAControllerDatabase)}.  The standard deviation is \$\rinline{getSDPayment(LAControllerDatabase)}. 
+
+%% a chunk with default options
+%% begin.rcode warning=FALSE, echo =FALSE, dev='my_pdf', fig.ext='pdf', fig.width = 8, fig.height = 8
+% mainPhyloPlot(LAControllerDatabase)
+%% end.rcode
+\end{document}
