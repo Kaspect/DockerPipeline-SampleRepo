@@ -13,9 +13,7 @@
 %% begin.rcode echo=FALSE
 % x <- "Los Angeles"
 % options(scipen = 999)
-% if (!exists("LAControllerDatabase")) {
-%	 LAControllerDatabase <- read.csv("https://controllerdata.lacity.org/api/views/3ctd-sjrm/rows.csv?accessType=DOWNLOAD")
-% } 
+%	LAControllerDatabase <- read.csv(file = "City_Expenditures_by_Month.csv", head=TRUE, sep=",")
 % source("SchwarzerRscript.r")
 %% end.rcode
 
