@@ -18,10 +18,13 @@
 %% end.rcode
 
 The \rinline{x} City Controller data under analysis includes \rinline{getNumPayments(LAControllerDatabase)} distinct payments, whose mean size is \$\rinline{getMeanPayment(LAControllerDatabase)},
-with a median size of \$\rinline{getMedianPayment(LAControllerDatabase)}.  The standard deviation is \$\rinline{getSDPayment(LAControllerDatabase)}. 
+with a median size of \$\rinline{getMedianPayment(LAControllerDatabase)}.  The standard deviation is \$\rinline{getSDPayment(LAControllerDatabase)}.
 
 %% a chunk with default options
 %% begin.rcode warning=FALSE, echo =FALSE, dev='my_pdf', fig.ext='pdf', fig.width = 8, fig.height = 8
 % mainPhyloPlot(LAControllerDatabase)
 %% end.rcode
+
+--Kaspect
+
 \end{document}
