@@ -14,7 +14,7 @@ mainPhyloPlot <- function(LAControllerDatabase) {
 	cluster <- hclust((dist(departmentExpenditure[2]))^(1/2), "ave")
 	labels <- t(departmentExpenditure[1])
 	labels <- substring(labels, 0, 10)
-	plot(cluster,  labels, hang = -1, main = "Departments by Net Expenditure")
+	plot(cluster,  labels, hang = -1, main = "Departments by Net Expenditure in LA County")
 }
 
 getNumPayments <- function(LAControllerDatabase) {
